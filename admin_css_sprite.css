@@ -1,0 +1,71 @@
+	.tabs { 
+			margin: 40px auto;
+			min-height: 200px;    
+			height : 90%;
+			position: absolute;
+			width: 90%;
+			}
+			.tab { 
+			float: left;
+			}
+			.tab label {   
+			font-size: 20px;	
+			background-color: #456;
+			border-radius: 5px 5px 0 0;
+			box-shadow: -3px 3px 2px #678 inset;
+			color: #DDD;
+			cursor: pointer;
+			left: 0; 
+			margin-top: 100px; 
+			margin-right: 1px;
+			padding: 5px 15px;
+			position: relative;
+			text-shadow: 1px 1px #000;
+			}
+			.tab input {
+				width: 45%;
+			}
+			.tab [type=radio] { display: none; }
+
+			
+			.content {
+				border-radius: 5px 5px 0 0;        
+				border-style:ridge;
+				border-width:5px;
+				border-color:#456;
+				
+			background-color: #ffffff;
+			bottom: 0;
+			left: 0;
+			overflow:scroll;
+			padding: 20px;
+			position: absolute;
+			right: 0;
+			top: 23px;
+			}
+			.content > * {
+			opacity: 0;
+
+			-moz-transform: translateX(-100%);
+			-webkit-transform: translateX(-100%);
+			-o-transform: translateX(-100%);
+
+			-moz-transition: all 0.6s ease;
+			-webkit-transition: all 0.6s ease;
+			-o-transition: all 0.6s ease;
+			}
+
+			[type="radio"]:checked ~ label {
+			background-color: #678;
+			box-shadow: 0 3px 2px #89A inset;
+			color: #FFF;
+			z-index: 2;
+			}
+			[type=radio]:checked ~ label ~ .content { z-index: 1; }
+			[type=radio]:checked ~ label ~ .content > * {
+			opacity: 1;
+			-moz-transform: translateX(0);
+			-webkit-transform: translateX(0);
+			-o-transform: translateX(0);
+			-ms-transform: translateX(0);
+			}

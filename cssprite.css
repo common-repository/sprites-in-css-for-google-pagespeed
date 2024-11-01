@@ -1,0 +1,12 @@
+.cssprite {
+		-webkit-transform-origin: 0 0;
+    -moz-transform-origin:0 0; 
+    -ms-transform-origin:0 0;
+    -o-transform-origin:0 0;
+    transform-origin:0 0;
+	
+}
+
+.csspritenone{
+	display:none !important;
+}
